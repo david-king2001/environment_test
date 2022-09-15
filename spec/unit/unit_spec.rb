@@ -9,7 +9,7 @@ RSpec.describe Book, type: :model do
     subject.title = "harry potter"
     subject.author = "jk rowling"
     subject.price = 0
-    subject.published_date = Date.now()
+    subject.published_date = Date.new()
     expect(subject).to be_valid
   end
 
@@ -30,7 +30,7 @@ RSpec.describe Book, type: :model do
     subject.title = "harry potter"
     subject.author = "jk rowling"
     subject.price = nil
-    subject.published_date = Date.now()
+    subject.published_date = Date.new()
     expect(subject).not_to be_valid
   end
 
@@ -38,7 +38,7 @@ RSpec.describe Book, type: :model do
     subject.title = "harry potter"
     subject.author = nil
     subject.price = 0
-    subject.published_date = Date.now()
+    subject.published_date = Date.new()
     expect(subject).not_to be_valid
   end
 end
