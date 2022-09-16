@@ -14,6 +14,12 @@
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+    <%= form.label :published_date %>
+    <%= form.date_select :published_date, :order => [:month, :day, :year], :start_year => Time.now.year-100 %>
   </div>
 
   <div class="actions">
