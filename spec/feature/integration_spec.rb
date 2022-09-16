@@ -17,7 +17,7 @@ RSpec.describe 'Creating a book', type: :feature do
     click_on 'Show'
     expect(page).to have_content('harry potter')
     expect(page).to have_content('jk rowling')
-    expect(page).to have_content('2022/03/12')
+    expect(page).to have_content('2022-03-12')
     expect(page).to have_content('60')
   end
 
@@ -49,7 +49,7 @@ RSpec.describe 'Editing a book', type: :feature do
     click_on 'Show'
     expect(page).to have_content('harry potter')
     expect(page).to have_content('jk rowling')
-    expect(page).to have_content('2022/03/12')
+    expect(page).to have_content('2022-03-12')
     expect(page).to have_content('60')
   end
   scenario 'editing an existing book-invalid inputs' do
